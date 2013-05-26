@@ -1,0 +1,17 @@
+NiTEControls - by PrimeSense
+----------------------------
+
+Prerequisites
+=============
+OpenNI 1.x
+NiTE 1.x
+
+
+Building
+========
+Building on Windows:
+    Open solution NiTEControls.sln (for Visual Studio 2010)
+
+Building on Linux/MacOS:
+    Run:
+    $ make
