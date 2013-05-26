@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}</ProjectGuid>
+    <RootNamespace>NiteControls</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)Bin\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)Bin\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Include;$(OPEN_NI_INCLUDE)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;XNV_NITE_CONTROLS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OPEN_NI_LIB)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenNI.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Include;$(OPEN_NI_INCLUDE)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;XNV_NITE_CONTROLS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OPEN_NI_LIB64)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenNI64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\Include;$(OPEN_NI_INCLUDE)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;XNV_NITE_CONTROLS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OPEN_NI_LIB)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenNI.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\Include;$(OPEN_NI_INCLUDE)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;XNV_NITE_CONTROLS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OPEN_NI_LIB64)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenNI64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\XnV3DVector.h" />
+    <ClInclude Include="..\Include\XnVActivationMessage.h" />
+    <ClInclude Include="..\Include\XnVBroadcaster.h" />
+    <ClInclude Include="..\Include\XnVCCMessage.h" />
+    <ClInclude Include="..\Include\XnVDirection.h" />
+    <ClInclude Include="..\Include\XnVFilter.h" />
+    <ClInclude Include="..\Include\XnVFlowRouter.h" />
+    <ClInclude Include="..\Include\XnVGesture.h" />
+    <ClInclude Include="..\Include\XnVHandle.h" />
+    <ClInclude Include="..\Include\XnVHandPointContext.h" />
+    <ClInclude Include="..\Include\XnVMathCommon.h" />
+    <ClInclude Include="..\Include\XnVMessage.h" />
+    <ClInclude Include="..\Include\XnVMessageGenerator.h" />
+    <ClInclude Include="..\Include\XnVMessageListener.h" />
+    <ClInclude Include="..\Include\XnVMultiItem1D.h" />
+    <ClInclude Include="..\Include\XnVMultiItem2D.h" />
+    <ClInclude Include="..\Include\XnVMultipleHands.h" />
+    <ClInclude Include="..\Include\XnVNite.h" />
+    <ClInclude Include="..\Include\XnVNiteControls.h" />
+    <ClInclude Include="..\Include\XnVNiteDefs.h" />
+    <ClInclude Include="..\Include\XnVNiteFramework.h" />
+    <ClInclude Include="..\Include\XnVNiteLog.h" />
+    <ClInclude Include="..\Include\XnVNiteStatus.h" />
+    <ClInclude Include="..\Include\XnVNiteVersion.h" />
+    <ClInclude Include="..\Include\XnVPointArea.h" />
+    <ClInclude Include="..\Include\XnVPointControl.h" />
+    <ClInclude Include="..\Include\XnVPointDenoiser.h" />
+    <ClInclude Include="..\Include\XnVPointFilter.h" />
+    <ClInclude Include="..\Include\XnVPointMessage.h" />
+    <ClInclude Include="..\Include\XnVPointTracker.h" />
+    <ClInclude Include="..\Include\XnVPushDetector.h" />
+    <ClInclude Include="..\Include\XnVSelectableSlider1D.h" />
+    <ClInclude Include="..\Include\XnVSelectableSlider2D.h" />
+    <ClInclude Include="..\Include\XnVSessionGenerator.h" />
+    <ClInclude Include="..\Include\XnVSessionListener.h" />
+    <ClInclude Include="..\Include\XnVSessionManager.h" />
+    <ClInclude Include="..\Include\XnVSessionMessage.h" />
+    <ClInclude Include="..\Include\XnVSlider1D.h" />
+    <ClInclude Include="..\Include\XnVSlider2D.h" />
+    <ClInclude Include="..\Include\XnVSlider3D.h" />
+    <ClInclude Include="..\Include\XnVSteadyDetector.h" />
+    <ClInclude Include="..\Include\XnVSwipeDetector.h" />
+    <ClInclude Include="XnVBuiltInGesture.h" />
+    <ClInclude Include="XnVBuiltInPointTracker.h" />
+    <ClInclude Include="XnVNiteEvents.h" />
+    <ClInclude Include="XnVPointBuffer.h" />
+    <ClInclude Include="XnVSessionListenerList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="XnVActivationMessage.cpp" />
+    <ClCompile Include="XnVBroadcaster.cpp" />
+    <ClCompile Include="XnVBuiltInGesture.cpp" />
+    <ClCompile Include="XnVBuiltInPointTracker.cpp" />
+    <ClCompile Include="XnVCCMessage.cpp" />
+    <ClCompile Include="XnVFilter.cpp" />
+    <ClCompile Include="XnVFlowRouter.cpp" />
+    <ClCompile Include="XnVGesture.cpp" />
+    <ClCompile Include="XnVHandIterator.cpp" />
+    <ClCompile Include="XnVMessage.cpp" />
+    <ClCompile Include="XnVMessageGenerator.cpp" />
+    <ClCompile Include="XnVMessageListener.cpp" />
+    <ClCompile Include="XnVMultiItem1D.cpp" />
+    <ClCompile Include="XnVMultiItem2D.cpp" />
+    <ClCompile Include="XnVMultipleHands.cpp" />
+    <ClCompile Include="XnVNite.cpp" />
+    <ClCompile Include="XnVPointArea.cpp" />
+    <ClCompile Include="XnVPointBuffer.cpp" />
+    <ClCompile Include="XnVPointControl.cpp" />
+    <ClCompile Include="XnVPointDenoiser.cpp" />
+    <ClCompile Include="XnVPointFilter.cpp" />
+    <ClCompile Include="XnVPointMessage.cpp" />
+    <ClCompile Include="XnVPointTracker.cpp" />
+    <ClCompile Include="XnVPushDetector.cpp" />
+    <ClCompile Include="XnVSelectableSlider1D.cpp" />
+    <ClCompile Include="XnVSelectableSlider2D.cpp" />
+    <ClCompile Include="XnVSessionGenerator.cpp" />
+    <ClCompile Include="XnVSessionListenerList.cpp" />
+    <ClCompile Include="XnVSessionManager.cpp" />
+    <ClCompile Include="XnVSessionMessage.cpp" />
+    <ClCompile Include="XnVSlider1D.cpp" />
+    <ClCompile Include="XnVSlider2D.cpp" />
+    <ClCompile Include="XnVSlider3D.cpp" />
+    <ClCompile Include="XnVSteadyDetector.cpp" />
+    <ClCompile Include="XnVSwipeDetector.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

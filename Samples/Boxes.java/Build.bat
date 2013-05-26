@@ -1,0 +1,2 @@
+
+@"%0\..\..\..\ThirdParty\PSCommon\BuildSystem\BuildJavaWindows.py" "%1" "%0\..\..\..\Bin" "%0\..\src\com\primesense\NiteControls\Samples\Boxes" com.primesense.NiteControls.Samples.Boxes org.openni.jar;com.primesense.NiteControls.jar com.primesense.NiteControls.Samples.Boxes.BoxesApplication

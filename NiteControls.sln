@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NiteControls", "Source\NiteControls.vcxproj", "{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{E228CBB7-C599-44DE-AF48-E074EF587CF8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Boxes", "Samples\Boxes\Boxes.vcxproj", "{B130A432-935E-48A8-A2F1-47EDAA17A62E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0} = {C771947F-A83C-4CB6-9249-EE7F15F5B1A0}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wrappers", "Wrappers", "{C53367B4-017F-44EA-97EE-EB1CF7C5F230}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NiteControls.c", "Wrappers\NiteControls.c\NiteControls.c.vcxproj", "{0AF46DEB-986D-4FB5-A79B-AF201495831A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0} = {C771947F-A83C-4CB6-9249-EE7F15F5B1A0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NiteControls.jni", "Wrappers\java\NiteControls.jni\NiteControls.jni.vcxproj", "{30CBE1D2-670B-42B3-BF7F-3615BADFB285}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A} = {0AF46DEB-986D-4FB5-A79B-AF201495831A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SingleControl", "Samples\SingleControl\SingleControl.vcxproj", "{00000000-0000-0000-0000-000000000104}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0} = {C771947F-A83C-4CB6-9249-EE7F15F5B1A0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Debug|Win32.Build.0 = Debug|Win32
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Debug|x64.ActiveCfg = Debug|x64
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Debug|x64.Build.0 = Debug|x64
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Release|Win32.ActiveCfg = Release|Win32
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Release|Win32.Build.0 = Release|Win32
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Release|x64.ActiveCfg = Release|x64
+		{C771947F-A83C-4CB6-9249-EE7F15F5B1A0}.Release|x64.Build.0 = Release|x64
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Debug|Win32.Build.0 = Debug|Win32
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Debug|x64.ActiveCfg = Debug|x64
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Debug|x64.Build.0 = Debug|x64
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Release|Win32.ActiveCfg = Release|Win32
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Release|Win32.Build.0 = Release|Win32
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Release|x64.ActiveCfg = Release|x64
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E}.Release|x64.Build.0 = Release|x64
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Debug|Win32.Build.0 = Debug|Win32
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Debug|x64.ActiveCfg = Debug|x64
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Debug|x64.Build.0 = Debug|x64
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Release|Win32.ActiveCfg = Release|Win32
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Release|Win32.Build.0 = Release|Win32
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Release|x64.ActiveCfg = Release|x64
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A}.Release|x64.Build.0 = Release|x64
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Debug|Win32.Build.0 = Debug|Win32
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Debug|x64.ActiveCfg = Debug|x64
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Debug|x64.Build.0 = Debug|x64
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Release|Win32.ActiveCfg = Release|Win32
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Release|Win32.Build.0 = Release|Win32
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Release|x64.ActiveCfg = Release|x64
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-000000000104}.Debug|Win32.ActiveCfg = Debug|Win32
+		{00000000-0000-0000-0000-000000000104}.Debug|Win32.Build.0 = Debug|Win32
+		{00000000-0000-0000-0000-000000000104}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-000000000104}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-000000000104}.Release|Win32.ActiveCfg = Release|Win32
+		{00000000-0000-0000-0000-000000000104}.Release|Win32.Build.0 = Release|Win32
+		{00000000-0000-0000-0000-000000000104}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-000000000104}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B130A432-935E-48A8-A2F1-47EDAA17A62E} = {E228CBB7-C599-44DE-AF48-E074EF587CF8}
+		{00000000-0000-0000-0000-000000000104} = {E228CBB7-C599-44DE-AF48-E074EF587CF8}
+		{0AF46DEB-986D-4FB5-A79B-AF201495831A} = {C53367B4-017F-44EA-97EE-EB1CF7C5F230}
+		{30CBE1D2-670B-42B3-BF7F-3615BADFB285} = {C53367B4-017F-44EA-97EE-EB1CF7C5F230}
+	EndGlobalSection
+EndGlobal

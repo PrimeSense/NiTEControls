@@ -1,0 +1,34 @@
+/**
+@mainpage NITE Controls Documentation
+
+This is a guide for NITE controls.
+It includes the following chapters:
+- @subpage session
+- @subpage controls
+*/
+
+/**
+@page session Session
+
+A session is a state in which the user is in control of the system using hand points.
+While in session, hand points are tracked and have persistent IDs.
+
+There are 3 possible states:
+- Not in session: Looking for a gesture
+- In session: Tracking hand points
+- Quick refocus (optional): Looking for the gesture and an additional quick refocus gesture.
+
+The session is encapsulated in the @ref XnVSessionManager object.
+Each hand point is represented by the @ref XnVHandPointContext structure.
+*/
+
+/**
+@page controls NITE Controls
+
+There are many objects that get the hand points (see @ref XnVHandPointContext), and perform some action.
+This action is to understand the stream of points as a coherent movement.
+These objects are all subclasses of @ref XnVMessageListener.
+Objects that send hand points (or, indeed, any other data) are subclasses of @ref XnVMessageGenerator.
+There are controls that both receive data and send data, either filtering the data or altering it.
+Those are subclasses of either @ref XnVFilter or @ref XnVPointFilter, themselves subclasses of both Generator and Listener.
+*/
